@@ -1,0 +1,14 @@
+ body: Align(
+          alignment: Alignment.bottomLeft,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.red,
+                child: Align(
+                    alignment: Alignment.bottomLeft, child: Text("merhaba")),
+              ),
+            ],
+          ),
