@@ -1,0 +1,10 @@
+body: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch, 
+        /*
+        Row normalde satır demek ama bu komutla rowun sütünunda genişleme sağlar
+        */
+        children: [
+          Container(width: 100,height: 100,color: Colors.red,),
+          Container(width: 100,height: 100,color: Colors.blue,),
+        ],
+      ),
