@@ -1,0 +1,20 @@
+   ElevatedButton(
+              child: Text("Geldiği Sayfaya Dön"),
+              onPressed: (){
+
+                Navigator.pop(context);
+              },
+            ),
+            ElevatedButton(
+              child: Text("Anasayfaya Dön"),
+              onPressed: (){
+
+                Navigator.of(context).popUntil((route) => route.isFirst);
+              },
+            ),
+            ElevatedButton(
+              child: Text("Anasayfaya Geçiş Yap"),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Anasayfa()));
+              },
+            ),
