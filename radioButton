@@ -1,0 +1,29 @@
+
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           RadioListTile(
+             title: Text("galatasaray"),
+             value: 1,
+             groupValue: radioDeger,
+             activeColor: Colors.amberAccent,
+             onChanged: (int? veri){
+               setState(() {
+                 radioDeger = veri!;
+
+               });
+               print("galatasaray secildi");
+             },
+           ),
+            RadioListTile(
+              title: Text("fenerbahçe"),
+              value: 2,
+              groupValue: radioDeger,
+              activeColor: Colors.red,
+              onChanged: (int? veri){
+                setState(() {
+                  radioDeger = veri!;
+
+                });
+                print("fenerbahçe secildi");
+              },
+            ),
