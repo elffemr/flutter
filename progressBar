@@ -1,0 +1,48 @@
+class _MyHomePageState extends State<MyHomePage> {
+
+  bool progressBarGorun = false;
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+
+        title: Text(""),
+      ),
+      body: Center(
+
+        child: Column(
+
+          mainAxisAlignment: MainAxisAlignment.center,
+
+          children: [
+           Visibility(
+             visible: progressBarGorun,
+             child: CircularProgressIndicator(
+               valueColor: AlwaysStoppedAnimation<Color>(Colors.deepOrange),
+             ),
+           ),
+            ElevatedButton(
+              child: Text("başla"),
+              onPressed: (){
+                setState(() {
+                  progressBarGorun = true;
+                });
+              },
+            ),
+            ElevatedButton(
+              child: Text("dur"),
+              onPressed: (){
+                setState(() {
+                  progressBarGorun = false;
+                });
+              },
+            ),
+          ],
+
+        ),
+      ),
+
+
+    );
