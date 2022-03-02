@@ -1,0 +1,29 @@
+class _MyHomePageState extends State<MyHomePage> {
+
+  double ilerleme = 50.0;
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+
+        title: Text(""),
+      ),
+      body: Center(
+
+        child: Column(
+
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           Text("sonuc : ${ilerleme.toInt()}"),
+            Slider(
+              max: 100.0,
+              min: 0.0,
+              value: ilerleme,
+              onChanged: (double i){
+                setState(() {
+                  ilerleme = i;
+                });
+              },
+            ),
