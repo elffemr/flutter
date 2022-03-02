@@ -1,0 +1,15 @@
+ children:[
+
+            Switch(
+              value: switchKontrol,
+              activeTrackColor: Colors.lightGreen,
+              activeColor:  Colors.green,
+              inactiveTrackColor: Colors.grey,
+              inactiveThumbColor: Colors.black,
+              onChanged: (veri){
+                setState(() {
+                  switchKontrol = veri;
+                });
+                print("swtich : $veri");
+              },
+            ),
