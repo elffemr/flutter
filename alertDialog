@@ -1,0 +1,73 @@
+ElevatedButton(
+                child: Text("Basit Alert"),
+                onPressed: (){
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context){
+                      return AlertDialog(
+                        title: Text("Başlık"),
+                        content: Text("içerik"),
+                        actions: [
+                          TextButton(
+                            child: Text("İptal"),
+                            onPressed: (){
+                              Navigator.pop(context);
+                            },
+                          ),
+                          TextButton(
+                            child: Text("Tamam"),
+                            onPressed: (){
+                              print("tamam secildi");
+                            },
+                          ),
+                        ],
+                      );
+                    }
+                  );
+                },
+              ),
+            ElevatedButton(
+              child: Text("Özel Alert"),
+              onPressed: (){
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context){
+                      return AlertDialog(
+                        title: Text("Özel Alert",style: TextStyle(color: Colors.white),),
+                        backgroundColor: Colors.indigoAccent,
+                        content: SizedBox(
+                          height: 80,
+                          child: Column(
+                            children: [
+                              TextField(
+                                controller: tfControl,
+                                decoration: InputDecoration(
+                                  labelText: "Veri",
+                                  floatingLabelStyle: TextStyle(
+                                    color: Colors.white
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        actions: [
+                          TextButton(
+                            child: Text("İptal",style: TextStyle(color: Colors.white),),
+                            onPressed: (){
+                              Navigator.pop(context);
+                            },
+                          ),
+                          TextButton(
+                            child: Text("Veri Oku",style: TextStyle(color: Colors.white),),
+                            onPressed: (){
+                              String alinanVeri = tfControl.text;
+                              print("Veri Okundu $alinanVeri");
+                            },
+                          ),
+                        ],
+                      );
+                    }
+                );
+              },
+            ),
