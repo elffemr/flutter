@@ -1,0 +1,15 @@
+PopupMenuButton(
+              child: Icon(Icons.open_in_browser),
+              itemBuilder: (context)=>[
+                PopupMenuItem(
+                  value: 1,
+                  child: Text("sil",style: TextStyle(color: Colors.red)),
+                ),
+                PopupMenuItem(
+                  value: 2,
+                  child: Text("sil",style: TextStyle(color: Colors.blue)),
+                ),
+              ],
+              onCanceled: (){
+                print("seçim yapılmadı");
+              },
